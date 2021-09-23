@@ -21,9 +21,16 @@ export default class Card extends Component {
     constructor() {
     super(...arguments);
     this.state = {
-    showDetails: false
+    showDetails: false,cosa:true}
     };
+    
+
+    toggleDetails(){
+this.setState({showDetails:!this.state.showDetails});
+
+        
     }
+
     render() {
         let cardDetails;
         if (this.state.showDetails) {
@@ -34,13 +41,26 @@ export default class Card extends Component {
         </div>
         );
         };
-        return (
+      
+        /*return (
         <div className="card">
         <div className="card__title" onClick={
         ()=>this.setState({showDetails: !this.state.showDetails})
         }>{this.props.title}</div>
         {cardDetails}
         </div>
-        );
-       }
+        );*/
+
+return(
+<div className="card">
+        <div className={this.state.cosa ? "card__title":"cosa"} onClick={this.toggleDetails.bind(this)}>
+        {this.props.title}</div>
+        {cardDetails}
+        </div>
+
+
+
+);
+
     }
+}
