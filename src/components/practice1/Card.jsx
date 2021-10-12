@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CheckList from './CheckList';
+import marked from 'marked';
 /*
 export default class Card extends Component {
 render() {
@@ -36,7 +37,7 @@ this.setState({showDetails:!this.state.showDetails});
         if (this.state.showDetails) {
         cardDetails = (
         <div className="card__details">
-        {this.props.description}
+        {marked(this.props.description)}
         <CheckList cardId={this.props.id} tasks={this.props.tasks} />
         </div>
         );
