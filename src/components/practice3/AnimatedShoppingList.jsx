@@ -57,4 +57,4 @@ bind(this)}/>
  );
  }
 };
-render(<AnimatedShoppingList />, document.getElementById('root'));
+/*render(<AnimatedShoppingList />, document.getElementById('root'));*/
